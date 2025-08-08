@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import *
 from tkinter import messagebox
+from tkinter import font
 
 import pandas as pd
 from datetime import datetime
@@ -118,7 +119,20 @@ if not os.path.exists("planilha.xlsx"):
 
 root = tk.Tk()
 root.title("Tabela de Despesas")
-root.geometry("600x400")
+root.geometry("600x300")
+root.resizable(False, False)
+
+font.Font(family="Helvetica", size=25)
+root.option_add("*Font", "Helvetica 25")
+root.configure(bg="#f0f0f0")
+
+style = ttk.Style()
+style.theme_use("clam")  # ou "default", "alt", "vista", "xpnative"
+style.configure("TButton",relief="flat" ,background="#4CAF50", foreground="white", font="Helvetica 25", padding=6)
+
+style.configure("TLabel", font="Helvetica 25")
+style.configure("TEntry", font="Helvetica 25")
+
 
 # Categoria
 lb_categoria = tk.Label(root, text="Categoria")
