@@ -14,14 +14,14 @@ A desktop application designed to track and visualize personal expenses. This to
     * **Trends**: A bar chart displaying total spending for every month of the current year.
 * **Automated Initialization**: The system detects if the database exists on startup and creates it if necessary.
 
-##Project Structure
+## Project Structure
 
 The project is divided into two main modules:
 
 1.  **`main.py`**: Handles the UI logic, window rendering, and widget placement using a custom `Field` class for consistent styling.
 2.  **`dataframe.py`**: Contains the backend logic, including Excel manipulation via `pandas` and chart generation via `matplotlib`.
 
-## ## Installation
+## Installation
 
 Ensure you have Python installed, then install the required dependencies:
 
@@ -31,7 +31,7 @@ pip install pandas matplotlib openpyxl
 
 *Note: `tkinter` is usually included with standard Python installations.*
 
-##How to Use
+## How to Use
 
 1.  **Launch the App**: Run the main script:
     ```bash
@@ -45,7 +45,7 @@ pip install pandas matplotlib openpyxl
 3.  **Analyze Data**:
     * Click **Generate Data** to open a window with the Pie and Bar charts.
 
-## ## Technical Details
+## Technical Details
 
 * **Backend**: `pandas` for data framing and `openpyxl` for Excel engine support.
 * **Charts**: `matplotlib` with a dual-subplot configuration (1x2).
