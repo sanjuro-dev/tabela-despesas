@@ -2,7 +2,7 @@
 
 A desktop application designed to track and visualize personal expenses. This tool provides a user-friendly GUI to log expenditures and generates insightful charts to analyze spending habits over time.
 
-## ## Features
+## Features
 
 * **Graphical User Interface (GUI)**: Built with `tkinter`, featuring a clean layout and high-readability fonts.
 * **Persistent Storage**: Automatically manages an Excel database (`data.xlsx`) to save your records.
@@ -14,7 +14,7 @@ A desktop application designed to track and visualize personal expenses. This to
     * **Trends**: A bar chart displaying total spending for every month of the current year.
 * **Automated Initialization**: The system detects if the database exists on startup and creates it if necessary.
 
-## ## Project Structure
+##Project Structure
 
 The project is divided into two main modules:
 
@@ -31,7 +31,7 @@ pip install pandas matplotlib openpyxl
 
 *Note: `tkinter` is usually included with standard Python installations.*
 
-## ## How to Use
+##How to Use
 
 1.  **Launch the App**: Run the main script:
     ```bash
