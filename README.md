@@ -1,60 +1,54 @@
-# Controle de Despesas com Tkinter
+# Spending's Table
 
-Este é um aplicativo simples em Python para registrar despesas mensais, categorizá-las e visualizar gráficos de distribuição e gastos mensais.
+A desktop application designed to track and visualize personal expenses. This tool provides a user-friendly GUI to log expenditures and generates insightful charts to analyze spending habits over time.
 
-## Funcionalidades
+## ## Features
 
-* Cadastro de despesas por categoria, descrição e valor.
-* Armazenamento dos dados em arquivo Excel (`planilha.xlsx`).
-* Geração de gráficos:
+* **Graphical User Interface (GUI)**: Built with `tkinter`, featuring a clean layout and high-readability fonts.
+* **Persistent Storage**: Automatically manages an Excel database (`data.xlsx`) to save your records.
+* **Smart Input**:
+    * **Categories**: Pre-defined dropdown menu (Energy, Wi-Fi, Transport, Food, Leisure).
+    * **Formatting**: Automatically handles decimal commas/dots for financial values.
+* **Data Visualization**:
+    * **Distribution**: A pie chart showing the percentage of spending per category for the current month.
+    * **Trends**: A bar chart displaying total spending for every month of the current year.
+* **Automated Initialization**: The system detects if the database exists on startup and creates it if necessary.
 
-  * Pizza: Distribuição percentual dos gastos por categoria no mês atual.
-  * Barras: Gastos totais por mês no ano atual.
+## ## Project Structure
 
-## Tecnologias Utilizadas
+The project is divided into two main modules:
 
-* Python 3.x
-* Tkinter (interface gráfica)
-* Pandas (manipulação de dados)
-* Matplotlib (gráficos)
-* Openpyxl (para leitura/escrita de Excel)
+1.  **`main.py`**: Handles the UI logic, window rendering, and widget placement using a custom `Field` class for consistent styling.
+2.  **`dataframe.py`**: Contains the backend logic, including Excel manipulation via `pandas` and chart generation via `matplotlib`.
 
-## Como usar
+## ## Installation
 
-1. Certifique-se de ter Python 3 instalado.
-2. Instale as dependências:
+Ensure you have Python installed, then install the required dependencies:
 
 ```bash
 pip install pandas matplotlib openpyxl
 ```
 
-3. Execute o script:
+*Note: `tkinter` is usually included with standard Python installations.*
 
-```bash
-python seu_arquivo.py
-```
+## ## How to Use
 
-4. Na interface, selecione a categoria, preencha descrição e valor, e clique em **Adicionar** para salvar uma despesa.
-5. Clique em **Gerar Dados** para visualizar os gráficos.
+1.  **Launch the App**: Run the main script:
+    ```bash
+    python main.py
+    ```
+2.  **Log an Expense**:
+    * Select a **Category** from the dropdown.
+    * Enter a **Description** (e.g., "Grocery Store").
+    * Input the **Value** (numbers only).
+    * Click **Add**.
+3.  **Analyze Data**:
+    * Click **Generate Data** to open a window with the Pie and Bar charts.
 
-## Observações
+## ## Technical Details
 
-* O arquivo `planilha.xlsx` será criado automaticamente na primeira execução.
-* Os valores devem ser informados usando ponto ou vírgula decimal (ex: `10.50` ou `10,50`).
-* O gráfico de pizza considera apenas despesas do mês atual.
+* **Backend**: `pandas` for data framing and `openpyxl` for Excel engine support.
+* **Charts**: `matplotlib` with a dual-subplot configuration (1x2).
+* **Styling**: Uses the `clam` theme for `ttk` widgets and custom high-resolution font settings (Helvetica 25) for accessibility.
 
-## Estrutura do arquivo Excel
-
-| Categoria  | Descrição    | Valor  | Data       |
-| ---------- | ------------ | ------ | ---------- |
-| Luz        | Conta de luz | 100.00 | 2025-08-07 |
-| Transporte | Ônibus       | 15.50  | 2025-08-07 |
-
-## Exemplo de categorias
-
-* Luz
-* Wi-Fi
-* Transporte
-* Comida
-* Lazer
-
+---
